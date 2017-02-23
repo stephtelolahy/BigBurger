@@ -12,9 +12,25 @@
 
 - (void)fetchProducts
 {
-    // TODO implement NSURLSession
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://bigburger.useradgents.com/catalog"]
+                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error == nil)
+        {
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSMutableArray *products = [[NSMutableArray alloc] init];
+            for (NSDictionary* dictionary in jsonArray) {
+                [products addObject:[[Product alloc] initWithDictionary:dictionary]];
+            }
+            [self.delegate productsManager:self didSucceed:products];
+        }
+        else
+        {
+            [self.delegate productsManager:self didFail:error];
+        }
+    }];
     
-    [self.delegate productsManager:self didSucceed:@[]];
+    [dataTask resume];
 }
 
 @end

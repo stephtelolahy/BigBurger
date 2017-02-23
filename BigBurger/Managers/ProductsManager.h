@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Product.h"
 
 @protocol ProductsManagerDelegate;
 

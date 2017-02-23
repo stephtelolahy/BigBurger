@@ -11,7 +11,13 @@
 // Model for food menu, having the same structure as API response
 @interface Product : NSObject
 
+@property   (strong, readonly)  NSString *ref;
+@property   (strong, readonly)  NSString *title;
+@property   (strong, readonly)  NSString *productDescription;
+@property   (strong, readonly)  NSString *thumbnail;
+@property   (assign, readonly)  long price;
 
-// TODO: parse from JSON data
+// Creating instance from JSON object
+- (id)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

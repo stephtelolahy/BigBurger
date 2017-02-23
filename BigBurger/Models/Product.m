@@ -10,4 +10,19 @@
 
 @implementation Product
 
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+    NSParameterAssert(dictionary);
+    
+    self = [super init];
+    if (self != nil) {
+        _ref = [dictionary objectForKey:@"ref"];
+        _title = [dictionary objectForKey:@"title"];
+        _productDescription = [dictionary objectForKey:@"description"];
+        _thumbnail = [dictionary objectForKey:@"thumbnail"];
+        _price = [[dictionary objectForKey:@"price"] longValue];
+    }
+    return self;
+}
+
 @end
