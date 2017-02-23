@@ -10,9 +10,8 @@
 * Launch app
 * View available products online
 * Add a product to order
-* Go to order summary
 * View order details
-* View order amount and submit
+* View order amount
 
 * View products loading view
 * View products error view
