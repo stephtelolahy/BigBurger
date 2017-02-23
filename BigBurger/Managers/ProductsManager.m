@@ -23,35 +23,7 @@
     _networkOperation = [[NetworkOperation alloc] initWithServiceType:ServiceTypeGetProducts];
     _networkOperation.delegate = self;
     [[NetworkOperation sharedQueue] addOperation:_networkOperation];
-    
-    
-//    __weak typeof(self) weakSelf = self;
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://bigburger.useradgents.com/catalog"]
-//                                            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-//        if (error == nil)
-//        {
-//            // model parsing in background thread
-//            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-//            NSMutableArray *products = [[NSMutableArray alloc] init];
-//            for (NSDictionary* dictionary in jsonArray) {
-//                [products addObject:[[Product alloc] initWithDictionary:dictionary]];
-//            }
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [weakSelf.delegate productsManager:weakSelf didSucceed:products];
-//            });
-//        }
-//        else
-//        {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                [weakSelf.delegate productsManager:weakSelf didFail:error];
-//            });
-//        }
-//    }];
-//    
-//    [dataTask resume];
 }
-
 
 #pragma mark - NetworkOperationDelegate
 
@@ -64,5 +36,38 @@
 {
     [self.delegate productsManager:self didFail:error];
 }
+
+
+#if 0 // Using NSURLSession
+
+- (void)fetchProducts
+{
+    __weak typeof(self) weakSelf = self;
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://bigburger.useradgents.com/catalog"] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error == nil)
+        {
+            // model parsing in background thread
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+            NSMutableArray *products = [[NSMutableArray alloc] init];
+            for (NSDictionary* dictionary in jsonArray) {
+                [products addObject:[[Product alloc] initWithDictionary:dictionary]];
+            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.delegate productsManager:weakSelf didSucceed:products];
+            });
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.delegate productsManager:weakSelf didFail:error];
+            });
+        }
+    }];
+    
+    [dataTask resume];
+}
+
+#endif
 
 @end

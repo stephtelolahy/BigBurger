@@ -11,7 +11,7 @@
 
 @protocol NetworkOperationDelegate;
 
-// A pattern-command base operation for API call
+// A pattern-command NSOperation for API call
 // See ServiceAtlas for configuration
 @interface NetworkOperation : NSOperation
 

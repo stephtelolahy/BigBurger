@@ -18,15 +18,13 @@
 * Base localization
 * View available products online
 * Add a product to order
-
 * View order details
 * View order amount
-* View products loading view
-* View products error view
+
 * Edit order's product quantity
 * Delete order's product
+* View products loading view
+* View products error view
 * View order empty view
-* View available products offline
-* Unit testing
 
 * Developer: stephano.telolahy@gmail.com
