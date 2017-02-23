@@ -13,4 +13,10 @@
 // display a brief message
 - (void)showToast:(NSString *)message;
 
+// show a MBProgressHUD
+- (void)showLoadingView;
+
+// hide associated MBProgressHUD
+- (void)hideLoadingView;
+
 @end

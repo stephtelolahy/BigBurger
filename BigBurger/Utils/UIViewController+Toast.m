@@ -23,4 +23,18 @@
     [hud hideAnimated:YES afterDelay:1];
 }
 
+- (void)showLoadingView
+{
+    MBProgressHUD* hud = [MBProgressHUD HUDForView:self.view];
+    if (hud == nil) {
+        hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.label.text = NSLocalizedString(@"Loading ...", @"loading message");
+    }
+}
+
+- (void)hideLoadingView
+{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
 @end

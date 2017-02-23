@@ -66,7 +66,7 @@
     {
         [_productsManager fetchProducts];
         
-        // TODO: show loadingView
+        [self showLoadingView];
     }
     
     [self updateOrderButton];
@@ -88,10 +88,12 @@
 
 - (void)productsManager:(ProductsManager *)manager didSucceed:(NSArray *)products
 {
-    // TODO: hide loadingView
+    [self hideLoadingView];
     
     if (products.count == 0)
     {
+        // TODO: show errorView
+        
         [self showToast:NSLocalizedString(@"No products found", @"empty products message")];
     }
     else
@@ -104,9 +106,10 @@
 
 - (void)productsManager:(ProductsManager *)manager didFail:(NSError *)error
 {
-    // TODO: hide loadingView
+    [self hideLoadingView];
     
-    // show errorView
+    
+    // TODO: show errorView
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
                                                     message:nil
                                                    delegate:nil
