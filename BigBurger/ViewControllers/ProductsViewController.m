@@ -24,6 +24,8 @@
     
     __weak IBOutlet UITableView *_tableView;
     __weak UIBarButtonItem *_orderButton;
+    __weak IBOutlet UIView *_errorView;
+    __weak IBOutlet UILabel *_errorLabel;
 }
 
 #pragma mark - Lifecycle
@@ -84,6 +86,16 @@
 }
 
 
+#pragma mark - IBAction
+
+- (IBAction)retryButtonTouchUpInside:(id)sender
+{
+    [_productsManager fetchProducts];
+    _errorView.hidden = YES;
+    [self showLoadingView];
+}
+
+
 #pragma mark - ProductsManagerDelegate
 
 - (void)productsManager:(ProductsManager *)manager didSucceed:(NSArray *)products
@@ -92,9 +104,8 @@
     
     if (products.count == 0)
     {
-        // TODO: show errorView
-        
-        [self showToast:NSLocalizedString(@"No products found", @"empty products message")];
+        _errorView.hidden = NO;
+        _errorLabel.text = NSLocalizedString(@"No products found", @"empty products message");
     }
     else
     {
@@ -108,14 +119,8 @@
 {
     [self hideLoadingView];
     
-    
-    // TODO: show errorView
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
-                                                    message:nil
-                                                   delegate:nil
-                                          cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
-                                          otherButtonTitles:nil];
-    [alert show];
+    _errorView.hidden = NO;
+    _errorLabel.text = [error localizedDescription];
 }
 
 #pragma mark - UITableViewDataSource
