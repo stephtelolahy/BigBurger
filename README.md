@@ -22,9 +22,10 @@
 * View order amount
 * Edit order's product quantity
 * Delete order's product
+* View order empty view
 
 * View products loading view
 * View products error view
-* View order empty view
+
 
 * Developer: stephano.telolahy@gmail.com

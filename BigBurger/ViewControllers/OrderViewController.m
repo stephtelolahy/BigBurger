@@ -18,6 +18,7 @@
 {
     __weak IBOutlet UITableView *_tableView;
     __weak IBOutlet UIButton *_submitButton;
+    __weak IBOutlet UILabel *_emptyView;
 }
 
 #pragma mark - LifeCycle
@@ -104,7 +105,7 @@
 {
     [_tableView reloadData];
     [_submitButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"Payer %.2f €", @"submit button"), _order.totalPrice] forState:UIControlStateNormal];
-    _submitButton.enabled = _order.totalQuantity > 0;
+    _emptyView.hidden = _order.totalQuantity > 0;
 }
 
 

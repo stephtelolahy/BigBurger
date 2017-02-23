@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderViewController">
             <connections>
+                <outlet property="_emptyView" destination="QkO-0h-eGO" id="Smy-cW-yTg"/>
                 <outlet property="_submitButton" destination="toj-Yt-7CE" id="n83-ub-6oM"/>
                 <outlet property="_tableView" destination="YsV-mu-2yH" id="wpM-PM-zFe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -21,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Yt-7CE">
+                <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="toj-Yt-7CE">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.74901960779999999" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -36,12 +37,23 @@
                     <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <label hidden="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your order is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkO-0h-eGO">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="QkO-0h-eGO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Se-bd-Pjt"/>
                 <constraint firstItem="toj-Yt-7CE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4if-No-XEa"/>
                 <constraint firstAttribute="trailing" secondItem="toj-Yt-7CE" secondAttribute="trailing" id="BcU-p1-gXG"/>
                 <constraint firstItem="YsV-mu-2yH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="BvB-lB-8xW"/>
+                <constraint firstAttribute="bottom" secondItem="QkO-0h-eGO" secondAttribute="bottom" id="Uf7-Yf-zJn"/>
+                <constraint firstAttribute="trailing" secondItem="QkO-0h-eGO" secondAttribute="trailing" id="XK7-f5-NBr"/>
+                <constraint firstItem="QkO-0h-eGO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ctg-qp-w0z"/>
                 <constraint firstAttribute="bottom" secondItem="toj-Yt-7CE" secondAttribute="bottom" id="g4I-nw-Fzm"/>
                 <constraint firstItem="toj-Yt-7CE" firstAttribute="top" secondItem="YsV-mu-2yH" secondAttribute="bottom" id="kAs-hO-bzb"/>
                 <constraint firstItem="YsV-mu-2yH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s3a-Uc-ezw"/>
