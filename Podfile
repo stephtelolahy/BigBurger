@@ -6,6 +6,7 @@ target 'BigBurger' do
   # use_frameworks!
 
   pod 'SDWebImage', '~>3.8'
+  pod 'MBProgressHUD', '~> 1.0.0'
 
   target 'BigBurgerTests' do
     inherit! :search_paths

@@ -23,11 +23,27 @@
 
 #pragma mark - Public methods
 
+- (NSInteger)totalQuantity
+{
+    NSInteger result  = 0;
+    for (ProductRow *row in _productRows)
+    {
+        result+= row.quantity;
+    }
+    return result;
+}
 
 - (double)totalPrice
 {
-    return 0;
+    double result = 0;
+    for (ProductRow *row in _productRows)
+    {
+        result+= row.product.price * row.quantity;
+    }
+    return result;
 }
+
+
 
 - (void)incrementProduct:(Product *)product
 {

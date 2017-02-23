@@ -7,9 +7,10 @@
 //
 
 #import "ProductsViewController.h"
-#import "ProductsManager.h"
 #import "OrderViewController.h"
 #import "ProductTableViewCell.h"
+#import "ProductsManager.h"
+#import "MBProgressHUD.h"
 
 @interface ProductsViewController()<UITableViewDataSource, UITableViewDelegate, ProductsManagerDelegate, ProductTableViewCellDelegate>
 
@@ -22,6 +23,7 @@
     Order *_order;
     
     __weak IBOutlet UITableView *_tableView;
+    __weak UIBarButtonItem *_orderButton;
 }
 
 #pragma mark - Lifecycle
@@ -35,6 +37,7 @@
     // Order button on NavigationBar
     UIBarButtonItem *orderButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Order", @"order title") style:UIBarButtonItemStylePlain target:self action:@selector(orderButtonTouchUpInside:)];
     self.navigationItem.rightBarButtonItem = orderButton;
+    _orderButton = orderButton;
     
     // Init objetcs
     _productsManager = [[ProductsManager alloc] init];
@@ -57,9 +60,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [_productsManager fetchProducts];
-    
-    // TODO: show loadingView
+    if (!_products)
+    {
+        [_productsManager fetchProducts];
+        
+        // TODO: show loadingView
+    }
 }
 
 
@@ -126,7 +132,18 @@
 
 - (void)productTableViewCell:(ProductTableViewCell *)cell didAddProduct:(Product *)product
 {
-    // TODO: add product to order
+    // add product to order
+    [_order incrementProduct:product];
+    _orderButton.title = [NSString stringWithFormat:NSLocalizedString(@"Order(%d)", @"order title with quantity"), _order.totalQuantity] ;
+    
+    // display product added to order message
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.label.text = [NSString stringWithFormat:NSLocalizedString(@"Added %@", @"product added to order message"), product.title];
+    hud.margin = 10.f;
+    hud.offset = CGPointMake(hud.offset.x, 150);
+    hud.removeFromSuperViewOnHide = YES;
+    [hud hideAnimated:YES afterDelay:2];
 }
 
 @end

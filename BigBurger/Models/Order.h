@@ -12,7 +12,13 @@
 // Model for an order
 @interface Order : NSObject
 
+// Array of product rows
 @property   (strong, nonatomic, readonly) NSMutableArray *productRows;
+
+// Sum of product rows quantity
+@property   (assign, readonly)  NSInteger totalQuantity;
+
+// Sum of product rows price
 @property   (assign, readonly)  double totalPrice;
 
 // increment productrow quantity

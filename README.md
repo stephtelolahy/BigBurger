@@ -8,7 +8,9 @@
 ### Project Setup ###
 
 * Install pods using command $ pod install
-SDWebImage: loading image from Url
+- SDWebImage: loading image from Url
+- MBProgressHUD: displaying floating message
+
 
 ### Features ###
 
@@ -16,9 +18,9 @@ SDWebImage: loading image from Url
 * Base localization
 * View available products online
 * Add a product to order
+
 * View order details
 * View order amount
-
 * View products loading view
 * View products error view
 * Edit order's product quantity
