@@ -5,7 +5,7 @@ target 'BigBurger' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for BigBurger
+  pod 'SDWebImage', '~>3.8'
 
   target 'BigBurgerTests' do
     inherit! :search_paths

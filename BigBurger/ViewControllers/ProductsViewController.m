@@ -9,8 +9,9 @@
 #import "ProductsViewController.h"
 #import "ProductsManager.h"
 #import "OrderViewController.h"
+#import "ProductTableViewCell.h"
 
-@interface ProductsViewController()<ProductsManagerDelegate, UITableViewDataSource>
+@interface ProductsViewController()<UITableViewDataSource, UITableViewDelegate, ProductsManagerDelegate, ProductTableViewCellDelegate>
 
 @end
 
@@ -41,8 +42,10 @@
     _order = [[Order alloc] init];
     
     // setup tableView
-    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseId"];
+    [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ProductTableViewCell class]) bundle:nil] forCellReuseIdentifier:ProductTableViewCellReuseIdetifier];
+    _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.dataSource = self;
+    _tableView.delegate = self;
     
 }
 
@@ -103,12 +106,35 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    ProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ProductTableViewCellReuseIdetifier];
     Product *product = _products[indexPath.row];
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
-    cell.textLabel.text = product.title;
-    
+    [cell updateWithProduct:product];
+    cell.delegate = self;
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//}
+//
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewAutomaticDimension;
+}
+//
+//-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 44;
+//}
+
+
+#pragma mark - ProductTableViewCellDelegate
+
+- (void)productTableViewCell:(ProductTableViewCell *)cell didAddProduct:(Product *)product
+{
+    // TODO: add product to order
 }
 
 @end

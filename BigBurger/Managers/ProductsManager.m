@@ -12,22 +12,27 @@
 
 - (void)fetchProducts
 {
+    __weak typeof(self) weakSelf = self;
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:@"https://bigburger.useradgents.com/catalog"]
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil)
         {
-            // TODO: perform model parsing in background thread
+            // model parsing in background thread
             NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSMutableArray *products = [[NSMutableArray alloc] init];
             for (NSDictionary* dictionary in jsonArray) {
                 [products addObject:[[Product alloc] initWithDictionary:dictionary]];
             }
-            [self.delegate productsManager:self didSucceed:products];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.delegate productsManager:weakSelf didSucceed:products];
+            });
         }
         else
         {
-            [self.delegate productsManager:self didFail:error];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [weakSelf.delegate productsManager:weakSelf didFail:error];
+            });
         }
     }];
     
