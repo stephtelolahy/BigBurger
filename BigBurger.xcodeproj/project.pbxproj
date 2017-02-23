@@ -19,7 +19,6 @@
 		098AD5B61E5EBA7800C9868F /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AD5B51E5EBA7800C9868F /* Order.m */; };
 		098AD5B91E5EBDBA00C9868F /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AD5B81E5EBDBA00C9868F /* Product.m */; };
 		098AD5BC1E5EBEC500C9868F /* ProductsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AD5BB1E5EBEC500C9868F /* ProductsManager.m */; };
-		098AD5BE1E5EC33600C9868F /* FR.strings in Resources */ = {isa = PBXBuildFile; fileRef = 098AD5BD1E5EC33600C9868F /* FR.strings */; };
 		16BA65DD94D190BE62DE558D /* libPods-BigBurger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185732AB6987543244518D9 /* libPods-BigBurger.a */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
@@ -57,7 +56,6 @@
 		098AD5B81E5EBDBA00C9868F /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Product.m; path = Models/Product.m; sourceTree = "<group>"; };
 		098AD5BA1E5EBEC500C9868F /* ProductsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsManager.h; path = Managers/ProductsManager.h; sourceTree = "<group>"; };
 		098AD5BB1E5EBEC500C9868F /* ProductsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsManager.m; path = Managers/ProductsManager.m; sourceTree = "<group>"; };
-		098AD5BD1E5EC33600C9868F /* FR.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = FR.strings; sourceTree = "<group>"; };
 		358A92B14E3DB2D290FD32FE /* Pods-BigBurgerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurgerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurgerTests/Pods-BigBurgerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8185732AB6987543244518D9 /* libPods-BigBurger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BigBurger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91355B065C5C9A570829182D /* Pods-BigBurgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurgerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurgerTests/Pods-BigBurgerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +115,6 @@
 				094982711E5EB31900F12A20 /* Utils */,
 				091C41BE1E5EAFB800BB00C5 /* Assets.xcassets */,
 				091C41B21E5EAFB800BB00C5 /* Supporting Files */,
-				098AD5BD1E5EC33600C9868F /* FR.strings */,
 			);
 			path = BigBurger;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				091C41C21E5EAFB800BB00C5 /* LaunchScreen.storyboard in Resources */,
-				098AD5BE1E5EC33600C9868F /* FR.strings in Resources */,
 				091C41BF1E5EAFB800BB00C5 /* Assets.xcassets in Resources */,
 				0949827B1E5EB4F300F12A20 /* OrderViewController.xib in Resources */,
 				094982761E5EB4D900F12A20 /* ProductsViewController.xib in Resources */,

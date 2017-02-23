@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"order_title", nil);
+    self.title = NSLocalizedString(@"Order", @"order title");
 }
 
 - (void)didReceiveMemoryWarning {

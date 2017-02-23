@@ -27,10 +27,10 @@
     [super viewDidLoad];
     
     // viewController title
-    self.title = NSLocalizedString(@"products_title", nil);
+    self.title = NSLocalizedString(@"Products", @"products title");
     
     // Order button on NavigationBar
-    UIBarButtonItem *orderButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"order_title", nil) style:UIBarButtonItemStylePlain target:self action:@selector(orderButtonTouchUpInside:)];
+    UIBarButtonItem *orderButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Order", @"order title") style:UIBarButtonItemStylePlain target:self action:@selector(orderButtonTouchUpInside:)];
     self.navigationItem.rightBarButtonItem = orderButton;
     
     // Init objetcs
