@@ -10,7 +10,7 @@
 #import "ProductsManager.h"
 #import "OrderViewController.h"
 
-@interface ProductsViewController()<ProductsManagerDelegate>
+@interface ProductsViewController()<ProductsManagerDelegate, UITableViewDataSource>
 
 @end
 
@@ -19,6 +19,8 @@
     ProductsManager *_productsManager;
     NSArray *_products;
     Order *_order;
+    
+    __weak IBOutlet UITableView *_tableView;
 }
 
 #pragma mark - Lifecycle
@@ -38,7 +40,10 @@
     _productsManager.delegate = self;
     _order = [[Order alloc] init];
     
-    // TODO: setup tableView
+    // setup tableView
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"reuseId"];
+    _tableView.dataSource = self;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,13 +75,40 @@
 - (void)productsManager:(ProductsManager *)manager didSucceed:(NSArray *)products
 {
     // TODO: hide loadingView
-    // TODO: reload tableView
+    
+    // reload tableView
+    _products = products;
+    [_tableView reloadData];
 }
 
 - (void)productsManager:(ProductsManager *)manager didFail:(NSError *)error
 {
     // TODO: hide loadingView
-    // TODO: show errorView
+    
+    // show errorView
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
+                                                    message:nil
+                                                   delegate:nil
+                                          cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _products.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Product *product = _products[indexPath.row];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseId"];
+    cell.textLabel.text = product.title;
+    
+    return cell;
 }
 
 @end

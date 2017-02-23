@@ -17,6 +17,7 @@
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil)
         {
+            // TODO: perform model parsing in background thread
             NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSMutableArray *products = [[NSMutableArray alloc] init];
             for (NSDictionary* dictionary in jsonArray) {
