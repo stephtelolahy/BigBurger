@@ -15,7 +15,7 @@
     NSParameterAssert(dictionary);
     
     self = [super init];
-    if (self != nil) {
+    if (self) {
         _ref = [dictionary objectForKey:@"ref"];
         _title = [dictionary objectForKey:@"title"];
         _productDescription = [dictionary objectForKey:@"description"];

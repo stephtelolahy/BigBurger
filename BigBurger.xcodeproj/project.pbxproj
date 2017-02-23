@@ -23,6 +23,8 @@
 		AD58775F1E5EE55B00C02643 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD58775D1E5EE55B00C02643 /* ProductTableViewCell.m */; };
 		AD5877601E5EE55B00C02643 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD58775E1E5EE55B00C02643 /* ProductTableViewCell.xib */; };
 		AD5877631E5F10DF00C02643 /* ProductRow.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877621E5F10DF00C02643 /* ProductRow.m */; };
+		AD5877661E5F186A00C02643 /* NetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877651E5F186A00C02643 /* NetworkOperation.m */; };
+		AD5877691E5F18DF00C02643 /* ServiceAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877681E5F18DF00C02643 /* ServiceAtlas.m */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,10 @@
 		AD58775E1E5EE55B00C02643 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductTableViewCell.xib; path = ViewControllers/ProductTableViewCell.xib; sourceTree = "<group>"; };
 		AD5877611E5F10DF00C02643 /* ProductRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRow.h; path = Models/ProductRow.h; sourceTree = "<group>"; };
 		AD5877621E5F10DF00C02643 /* ProductRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRow.m; path = Models/ProductRow.m; sourceTree = "<group>"; };
+		AD5877641E5F186A00C02643 /* NetworkOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetworkOperation.h; path = DAL/NetworkOperation.h; sourceTree = "<group>"; };
+		AD5877651E5F186A00C02643 /* NetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkOperation.m; path = DAL/NetworkOperation.m; sourceTree = "<group>"; };
+		AD5877671E5F18DF00C02643 /* ServiceAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceAtlas.h; path = DAL/ServiceAtlas.h; sourceTree = "<group>"; };
+		AD5877681E5F18DF00C02643 /* ServiceAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceAtlas.m; path = DAL/ServiceAtlas.m; sourceTree = "<group>"; };
 		D421D1BBFDE3CC628E804CB3 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		E28995A0BD79163933659E32 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +164,10 @@
 		0949826E1E5EB2B600F12A20 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				AD5877641E5F186A00C02643 /* NetworkOperation.h */,
+				AD5877651E5F186A00C02643 /* NetworkOperation.m */,
+				AD5877671E5F18DF00C02643 /* ServiceAtlas.h */,
+				AD5877681E5F18DF00C02643 /* ServiceAtlas.m */,
 			);
 			name = DAL;
 			sourceTree = "<group>";
@@ -452,6 +462,8 @@
 				098AD5BC1E5EBEC500C9868F /* ProductsManager.m in Sources */,
 				098AD5B91E5EBDBA00C9868F /* Product.m in Sources */,
 				AD58775F1E5EE55B00C02643 /* ProductTableViewCell.m in Sources */,
+				AD5877661E5F186A00C02643 /* NetworkOperation.m in Sources */,
+				AD5877691E5F18DF00C02643 /* ServiceAtlas.m in Sources */,
 				094982751E5EB4D900F12A20 /* ProductsViewController.m in Sources */,
 				AD5877631E5F10DF00C02643 /* ProductRow.m in Sources */,
 				0949826D1E5EB29A00F12A20 /* AppDelegate.m in Sources */,

@@ -15,7 +15,7 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self != nil) {
+    if (self) {
         _productRows = [[NSMutableArray alloc] init];
     }
     return self;
