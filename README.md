@@ -1,6 +1,4 @@
-# README #
-
-BigBurger
+# BigBurger #
 
 ### What is this repository for? ###
 
