@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ProductsViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    // create root ViewController
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    ProductsViewController *productsViewController = [[ProductsViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:productsViewController];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 

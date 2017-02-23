@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  Order.m
 //  BigBurger
 //
 //  Created by Telolahy on 23/02/17.
 //  Copyright © 2017 Telolahy. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "Order.h"
 
-@interface ViewController : UIViewController
-
+@implementation Order
 
 @end
-

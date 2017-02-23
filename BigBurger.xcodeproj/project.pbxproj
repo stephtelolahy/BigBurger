@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		091C41B41E5EAFB800BB00C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C41B31E5EAFB800BB00C5 /* main.m */; };
-		091C41B71E5EAFB800BB00C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C41B61E5EAFB800BB00C5 /* AppDelegate.m */; };
-		091C41BA1E5EAFB800BB00C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C41B91E5EAFB800BB00C5 /* ViewController.m */; };
-		091C41BD1E5EAFB800BB00C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091C41BB1E5EAFB800BB00C5 /* Main.storyboard */; };
 		091C41BF1E5EAFB800BB00C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 091C41BE1E5EAFB800BB00C5 /* Assets.xcassets */; };
 		091C41C21E5EAFB800BB00C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 091C41C01E5EAFB800BB00C5 /* LaunchScreen.storyboard */; };
 		091C41CD1E5EAFB800BB00C5 /* BigBurgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 091C41CC1E5EAFB800BB00C5 /* BigBurgerTests.m */; };
+		0949826D1E5EB29A00F12A20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0949826C1E5EB29A00F12A20 /* AppDelegate.m */; };
+		094982751E5EB4D900F12A20 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094982731E5EB4D900F12A20 /* ProductsViewController.m */; };
+		094982761E5EB4D900F12A20 /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094982741E5EB4D900F12A20 /* ProductsViewController.xib */; };
+		0949827A1E5EB4F300F12A20 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 094982781E5EB4F300F12A20 /* OrderViewController.m */; };
+		0949827B1E5EB4F300F12A20 /* OrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 094982791E5EB4F300F12A20 /* OrderViewController.xib */; };
+		098AD5B61E5EBA7800C9868F /* Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 098AD5B51E5EBA7800C9868F /* Order.m */; };
 		16BA65DD94D190BE62DE558D /* libPods-BigBurger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185732AB6987543244518D9 /* libPods-BigBurger.a */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
@@ -31,17 +34,22 @@
 /* Begin PBXFileReference section */
 		091C41AF1E5EAFB800BB00C5 /* BigBurger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigBurger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		091C41B31E5EAFB800BB00C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		091C41B51E5EAFB800BB00C5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		091C41B61E5EAFB800BB00C5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		091C41B81E5EAFB800BB00C5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		091C41B91E5EAFB800BB00C5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		091C41BC1E5EAFB800BB00C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		091C41BE1E5EAFB800BB00C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		091C41C11E5EAFB800BB00C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		091C41C31E5EAFB800BB00C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		091C41C81E5EAFB800BB00C5 /* BigBurgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBurgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		091C41CC1E5EAFB800BB00C5 /* BigBurgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BigBurgerTests.m; sourceTree = "<group>"; };
 		091C41CE1E5EAFB800BB00C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0949826B1E5EB29A00F12A20 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Application/AppDelegate.h; sourceTree = "<group>"; };
+		0949826C1E5EB29A00F12A20 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Application/AppDelegate.m; sourceTree = "<group>"; };
+		094982721E5EB4D900F12A20 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductsViewController.h; path = ViewControllers/ProductsViewController.h; sourceTree = "<group>"; };
+		094982731E5EB4D900F12A20 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductsViewController.m; path = ViewControllers/ProductsViewController.m; sourceTree = "<group>"; };
+		094982741E5EB4D900F12A20 /* ProductsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductsViewController.xib; path = ViewControllers/ProductsViewController.xib; sourceTree = "<group>"; };
+		094982771E5EB4F300F12A20 /* OrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrderViewController.h; path = ViewControllers/OrderViewController.h; sourceTree = "<group>"; };
+		094982781E5EB4F300F12A20 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrderViewController.m; path = ViewControllers/OrderViewController.m; sourceTree = "<group>"; };
+		094982791E5EB4F300F12A20 /* OrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OrderViewController.xib; path = ViewControllers/OrderViewController.xib; sourceTree = "<group>"; };
+		098AD5B41E5EBA7800C9868F /* Order.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Order.h; path = Models/Order.h; sourceTree = "<group>"; };
+		098AD5B51E5EBA7800C9868F /* Order.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Order.m; path = Models/Order.m; sourceTree = "<group>"; };
 		358A92B14E3DB2D290FD32FE /* Pods-BigBurgerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurgerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurgerTests/Pods-BigBurgerTests.release.xcconfig"; sourceTree = "<group>"; };
 		8185732AB6987543244518D9 /* libPods-BigBurger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BigBurger.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91355B065C5C9A570829182D /* Pods-BigBurgerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurgerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurgerTests/Pods-BigBurgerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,14 +101,13 @@
 		091C41B11E5EAFB800BB00C5 /* BigBurger */ = {
 			isa = PBXGroup;
 			children = (
-				091C41B51E5EAFB800BB00C5 /* AppDelegate.h */,
-				091C41B61E5EAFB800BB00C5 /* AppDelegate.m */,
-				091C41B81E5EAFB800BB00C5 /* ViewController.h */,
-				091C41B91E5EAFB800BB00C5 /* ViewController.m */,
-				091C41BB1E5EAFB800BB00C5 /* Main.storyboard */,
+				0949826A1E5EB24A00F12A20 /* Application */,
+				094982701E5EB30500F12A20 /* ViewControllers */,
+				0949826F1E5EB2BC00F12A20 /* Managers */,
+				09E0DB141E5EB5C500178CFB /* Models */,
+				0949826E1E5EB2B600F12A20 /* DAL */,
+				094982711E5EB31900F12A20 /* Utils */,
 				091C41BE1E5EAFB800BB00C5 /* Assets.xcassets */,
-				091C41C01E5EAFB800BB00C5 /* LaunchScreen.storyboard */,
-				091C41C31E5EAFB800BB00C5 /* Info.plist */,
 				091C41B21E5EAFB800BB00C5 /* Supporting Files */,
 			);
 			path = BigBurger;
@@ -109,6 +116,8 @@
 		091C41B21E5EAFB800BB00C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				091C41C01E5EAFB800BB00C5 /* LaunchScreen.storyboard */,
+				091C41C31E5EAFB800BB00C5 /* Info.plist */,
 				091C41B31E5EAFB800BB00C5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -121,6 +130,58 @@
 				091C41CE1E5EAFB800BB00C5 /* Info.plist */,
 			);
 			path = BigBurgerTests;
+			sourceTree = "<group>";
+		};
+		0949826A1E5EB24A00F12A20 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0949826B1E5EB29A00F12A20 /* AppDelegate.h */,
+				0949826C1E5EB29A00F12A20 /* AppDelegate.m */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		0949826E1E5EB2B600F12A20 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DAL;
+			sourceTree = "<group>";
+		};
+		0949826F1E5EB2BC00F12A20 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		094982701E5EB30500F12A20 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				094982721E5EB4D900F12A20 /* ProductsViewController.h */,
+				094982731E5EB4D900F12A20 /* ProductsViewController.m */,
+				094982741E5EB4D900F12A20 /* ProductsViewController.xib */,
+				094982771E5EB4F300F12A20 /* OrderViewController.h */,
+				094982781E5EB4F300F12A20 /* OrderViewController.m */,
+				094982791E5EB4F300F12A20 /* OrderViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		094982711E5EB31900F12A20 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		09E0DB141E5EB5C500178CFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				098AD5B41E5EBA7800C9868F /* Order.h */,
+				098AD5B51E5EBA7800C9868F /* Order.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		219C23C045084A670F987B87 /* Frameworks */ = {
@@ -233,7 +294,8 @@
 			files = (
 				091C41C21E5EAFB800BB00C5 /* LaunchScreen.storyboard in Resources */,
 				091C41BF1E5EAFB800BB00C5 /* Assets.xcassets in Resources */,
-				091C41BD1E5EAFB800BB00C5 /* Main.storyboard in Resources */,
+				0949827B1E5EB4F300F12A20 /* OrderViewController.xib in Resources */,
+				094982761E5EB4D900F12A20 /* ProductsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,9 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				091C41BA1E5EAFB800BB00C5 /* ViewController.m in Sources */,
-				091C41B71E5EAFB800BB00C5 /* AppDelegate.m in Sources */,
+				0949827A1E5EB4F300F12A20 /* OrderViewController.m in Sources */,
+				098AD5B61E5EBA7800C9868F /* Order.m in Sources */,
 				091C41B41E5EAFB800BB00C5 /* main.m in Sources */,
+				094982751E5EB4D900F12A20 /* ProductsViewController.m in Sources */,
+				0949826D1E5EB29A00F12A20 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,14 +433,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		091C41BB1E5EAFB800BB00C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				091C41BC1E5EAFB800BB00C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		091C41C01E5EAFB800BB00C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
