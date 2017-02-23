@@ -18,7 +18,6 @@
 {
     __weak IBOutlet UITableView *_tableView;
     __weak IBOutlet UIButton *_submitButton;
-    
 }
 
 #pragma mark - LifeCycle
@@ -27,9 +26,6 @@
     [super viewDidLoad];
     
     self.title = NSLocalizedString(@"Order details", @"order details title");
-    
-    // Setup submit button
-    [self updateSubmitButton];
     
     // setup tableView
     [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ProductRowTableViewCell class]) bundle:nil] forCellReuseIdentifier:ProductRowTableViewCellReuseIdentifier];
@@ -46,6 +42,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self updateViews];
+}
 
 #pragma mark - IBAction
 
@@ -82,20 +82,27 @@
 
 - (void)productRowTableViewCell:(ProductRowTableViewCell *)cell didIncrement:(Product *)product
 {
+    [_order incrementProduct:product];
+    [self updateViews];
 }
 
 - (void)productRowTableViewCell:(ProductRowTableViewCell *)cell didDecrement:(Product *)product
 {
+    [_order decrementProduct:product];
+    [self updateViews];
 }
 
 - (void)productRowTableViewCell:(ProductRowTableViewCell *)cell didDelete:(Product *)product
 {
+    [_order removeProductRow:product];
+    [self updateViews];
 }
 
 #pragma mark - Private
 
-- (void)updateSubmitButton
+- (void)updateViews
 {
+    [_tableView reloadData];
     [_submitButton setTitle:[NSString stringWithFormat:NSLocalizedString(@"Payer %.2f €", @"submit button"), _order.totalPrice] forState:UIControlStateNormal];
     _submitButton.enabled = _order.totalQuantity > 0;
 }

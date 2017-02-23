@@ -20,9 +20,9 @@
 * Add a product to order
 * View order details
 * View order amount
-
 * Edit order's product quantity
 * Delete order's product
+
 * View products loading view
 * View products error view
 * View order empty view

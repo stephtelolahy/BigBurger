@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-// Each WebService call is considered as a Service
+// Each API call is defined by a Service
 // Here are defined all request configuration for available services
 @interface ServiceAtlas : NSObject
 

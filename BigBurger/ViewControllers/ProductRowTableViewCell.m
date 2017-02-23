@@ -13,6 +13,7 @@
     Product *_product;
     __weak IBOutlet UILabel *_quantityLabel;
     __weak IBOutlet UILabel *_titleLabel;
+    __weak IBOutlet UIButton *_decrementButton;
 }
 
 #pragma mark - Update
@@ -23,6 +24,7 @@
     
     _titleLabel.text = productRow.product.title;
     _quantityLabel.text =  [NSString stringWithFormat:@"%d", (int)productRow.quantity] ;
+    _decrementButton.hidden = productRow.quantity <= 1;
 }
 
 #pragma mark - IBAction

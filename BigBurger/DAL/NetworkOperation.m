@@ -41,6 +41,8 @@
 
 - (void)main
 {
+    // TODO: use NSURLSession
+    
     NSString *stringUrl = [ServiceAtlas urlForService:_serviceType];
     NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:stringUrl]];
     NSURLResponse * response = nil;

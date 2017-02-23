@@ -13,7 +13,7 @@
 
 // Business layer object for fetching products
 // First get products from API
-// Could be used to load products from local storage
+// Could be used further to load products from local storage
 @interface ProductsManager : NSObject
 
 @property   (weak, nonatomic)   id<ProductsManagerDelegate> delegate;

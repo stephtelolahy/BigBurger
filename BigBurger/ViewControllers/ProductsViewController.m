@@ -68,6 +68,8 @@
         
         // TODO: show loadingView
     }
+    
+    [self updateOrderButton];
 }
 
 
@@ -143,10 +145,18 @@
 {
     // add product to order
     [_order incrementProduct:product];
-    _orderButton.title = [NSString stringWithFormat:NSLocalizedString(@"Order(%d)", @"order title with quantity"), _order.totalQuantity] ;
+    [self updateOrderButton];
     
     // display product added to order message
     [self showToast:[NSString stringWithFormat:NSLocalizedString(@"Added %@", @"product added to order message"), product.title]];
+}
+
+
+#pragma mark - Private
+
+- (void)updateOrderButton
+{
+    _orderButton.title = [NSString stringWithFormat:NSLocalizedString(@"Order(%d)", @"order title with quantity"), _order.totalQuantity] ;
 }
 
 @end

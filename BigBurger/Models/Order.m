@@ -43,32 +43,38 @@
     return result;
 }
 
-
-
 - (void)incrementProduct:(Product *)product
 {
-    [self rowForProduct:product].quantity++;
+    ProductRow *row = [self rowForProduct:product];
+    if (!row)
+    {
+        row = [self addRowForProduct:product];
+    }
+    row.quantity++;
 }
 
 - (void)decrementProduct:(Product *)product
 {
-    [self rowForProduct:product].quantity--;
+    ProductRow *row = [self rowForProduct:product];
+    if (row)
+    {
+        if (row.quantity > 1)
+        {
+            row.quantity--;
+        }
+        else
+        {
+            [_productRows removeObject:row];
+        }
+    }
 }
 
 - (void)removeProductRow:(Product *)product
 {
-    ProductRow *rowToDelete = nil;
-    for (ProductRow *row in _productRows)
+    ProductRow *row = [self rowForProduct:product];
+    if (row)
     {
-        if ([row.product.ref isEqualToString:product.ref])
-        {
-            rowToDelete = row;
-            break;
-        }
-    }
-    if (rowToDelete)
-    {
-        [_productRows removeObject:rowToDelete];
+        [_productRows removeObject:row];
     }
 }
 
@@ -83,7 +89,11 @@
             return row;
         }
     }
-    // no row found
+    return nil;
+}
+
+- (ProductRow *)addRowForProduct:(Product *)product
+{
     ProductRow *row = [[ProductRow alloc] init];
     row.product = product;
     row.quantity = 0;
