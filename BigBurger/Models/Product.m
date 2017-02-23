@@ -20,7 +20,7 @@
         _title = [dictionary objectForKey:@"title"];
         _productDescription = [dictionary objectForKey:@"description"];
         _thumbnail = [dictionary objectForKey:@"thumbnail"];
-        _price = [[dictionary objectForKey:@"price"] longValue];
+        _price = [[dictionary objectForKey:@"price"] doubleValue] * 0.01f;
     }
     return self;
 }

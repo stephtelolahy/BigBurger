@@ -29,7 +29,7 @@
     _productTitle.text = product.title;
     _productDescription.text = product.productDescription;
     [_productImageview sd_setImageWithURL:[NSURL URLWithString:product.thumbnail]];
-    [_productAddButton setTitle:[NSString stringWithFormat:@"+ %.2f €", ((float)product.price) * 0.01f] forState:UIControlStateNormal];
+    [_productAddButton setTitle:[NSString stringWithFormat:@"+ %.2f €", product.price] forState:UIControlStateNormal];
 }
 
 #pragma mark - IBAction

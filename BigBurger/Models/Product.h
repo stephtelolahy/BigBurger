@@ -15,7 +15,7 @@
 @property   (strong, readonly)  NSString *title;
 @property   (strong, readonly)  NSString *productDescription;
 @property   (strong, readonly)  NSString *thumbnail;
-@property   (assign, readonly)  long price;
+@property   (assign, readonly)  double price;
 
 // Creating instance from JSON object
 - (id)initWithDictionary:(NSDictionary *)dictionary;
