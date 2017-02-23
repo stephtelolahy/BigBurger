@@ -22,6 +22,7 @@
 		16BA65DD94D190BE62DE558D /* libPods-BigBurger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8185732AB6987543244518D9 /* libPods-BigBurger.a */; };
 		AD58775F1E5EE55B00C02643 /* ProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD58775D1E5EE55B00C02643 /* ProductTableViewCell.m */; };
 		AD5877601E5EE55B00C02643 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD58775E1E5EE55B00C02643 /* ProductTableViewCell.xib */; };
+		AD5877631E5F10DF00C02643 /* ProductRow.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877621E5F10DF00C02643 /* ProductRow.m */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		AD58775C1E5EE55B00C02643 /* ProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductTableViewCell.h; path = ViewControllers/ProductTableViewCell.h; sourceTree = "<group>"; };
 		AD58775D1E5EE55B00C02643 /* ProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductTableViewCell.m; path = ViewControllers/ProductTableViewCell.m; sourceTree = "<group>"; };
 		AD58775E1E5EE55B00C02643 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductTableViewCell.xib; path = ViewControllers/ProductTableViewCell.xib; sourceTree = "<group>"; };
+		AD5877611E5F10DF00C02643 /* ProductRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRow.h; path = Models/ProductRow.h; sourceTree = "<group>"; };
+		AD5877621E5F10DF00C02643 /* ProductRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRow.m; path = Models/ProductRow.m; sourceTree = "<group>"; };
 		D421D1BBFDE3CC628E804CB3 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		E28995A0BD79163933659E32 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,6 +192,8 @@
 			children = (
 				098AD5B71E5EBDBA00C9868F /* Product.h */,
 				098AD5B81E5EBDBA00C9868F /* Product.m */,
+				AD5877611E5F10DF00C02643 /* ProductRow.h */,
+				AD5877621E5F10DF00C02643 /* ProductRow.m */,
 				098AD5B41E5EBA7800C9868F /* Order.h */,
 				098AD5B51E5EBA7800C9868F /* Order.m */,
 			);
@@ -448,6 +453,7 @@
 				098AD5B91E5EBDBA00C9868F /* Product.m in Sources */,
 				AD58775F1E5EE55B00C02643 /* ProductTableViewCell.m in Sources */,
 				094982751E5EB4D900F12A20 /* ProductsViewController.m in Sources */,
+				AD5877631E5F10DF00C02643 /* ProductRow.m in Sources */,
 				0949826D1E5EB29A00F12A20 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

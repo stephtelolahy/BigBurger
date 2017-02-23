@@ -10,7 +10,7 @@
 
 @implementation Product
 
-- (id)initWithDictionary:(NSDictionary *)dictionary
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
     NSParameterAssert(dictionary);
     
