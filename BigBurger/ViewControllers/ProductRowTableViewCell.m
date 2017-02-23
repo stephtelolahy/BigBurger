@@ -9,10 +9,37 @@
 #import "ProductRowTableViewCell.h"
 
 @implementation ProductRowTableViewCell
+{
+    Product *_product;
+    __weak IBOutlet UILabel *_quantityLabel;
+    __weak IBOutlet UILabel *_titleLabel;
+}
+
+#pragma mark - Update
 
 - (void)updateWithProductRow:(ProductRow *)productRow
 {
-    self.textLabel.text = [NSString stringWithFormat:@"%dx%@", (int)productRow.quantity, productRow.product.title];
+    _product = productRow.product;
+    
+    _titleLabel.text = productRow.product.title;
+    _quantityLabel.text =  [NSString stringWithFormat:@"%d", (int)productRow.quantity] ;
+}
+
+#pragma mark - IBAction
+
+- (IBAction)decrementButtonTouchUpInside:(id)sender
+{
+    [self.delegate productRowTableViewCell:self didDecrement:_product];
+}
+
+- (IBAction)incrementButtonTouchUpInside:(id)sender
+{
+    [self.delegate productRowTableViewCell:self didIncrement:_product];
+}
+
+- (IBAction)deleteButtonTouchUpInside:(id)sender
+{
+    [self.delegate productRowTableViewCell:self didDelete:_product];
 }
 
 @end

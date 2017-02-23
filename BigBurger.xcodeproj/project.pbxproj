@@ -27,6 +27,7 @@
 		AD5877691E5F18DF00C02643 /* ServiceAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877681E5F18DF00C02643 /* ServiceAtlas.m */; };
 		AD58776D1E5F237E00C02643 /* ProductRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD58776B1E5F237E00C02643 /* ProductRowTableViewCell.m */; };
 		AD58776E1E5F237E00C02643 /* ProductRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD58776C1E5F237E00C02643 /* ProductRowTableViewCell.xib */; };
+		AD5877711E5F314F00C02643 /* UIViewController+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877701E5F314F00C02643 /* UIViewController+Toast.m */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,8 @@
 		AD58776A1E5F237E00C02643 /* ProductRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRowTableViewCell.h; path = ViewControllers/ProductRowTableViewCell.h; sourceTree = "<group>"; };
 		AD58776B1E5F237E00C02643 /* ProductRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRowTableViewCell.m; path = ViewControllers/ProductRowTableViewCell.m; sourceTree = "<group>"; };
 		AD58776C1E5F237E00C02643 /* ProductRowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductRowTableViewCell.xib; path = ViewControllers/ProductRowTableViewCell.xib; sourceTree = "<group>"; };
+		AD58776F1E5F314F00C02643 /* UIViewController+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Toast.h"; path = "Utils/UIViewController+Toast.h"; sourceTree = "<group>"; };
+		AD5877701E5F314F00C02643 /* UIViewController+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Toast.m"; path = "Utils/UIViewController+Toast.m"; sourceTree = "<group>"; };
 		D421D1BBFDE3CC628E804CB3 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		E28995A0BD79163933659E32 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +201,8 @@
 		094982711E5EB31900F12A20 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				AD58776F1E5F314F00C02643 /* UIViewController+Toast.h */,
+				AD5877701E5F314F00C02643 /* UIViewController+Toast.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -468,6 +473,7 @@
 				0949827A1E5EB4F300F12A20 /* OrderViewController.m in Sources */,
 				098AD5B61E5EBA7800C9868F /* Order.m in Sources */,
 				091C41B41E5EAFB800BB00C5 /* main.m in Sources */,
+				AD5877711E5F314F00C02643 /* UIViewController+Toast.m in Sources */,
 				098AD5BC1E5EBEC500C9868F /* ProductsManager.m in Sources */,
 				AD58776D1E5F237E00C02643 /* ProductRowTableViewCell.m in Sources */,
 				098AD5B91E5EBDBA00C9868F /* Product.m in Sources */,

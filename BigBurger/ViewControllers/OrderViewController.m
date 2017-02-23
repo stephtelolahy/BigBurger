@@ -8,7 +8,7 @@
 
 #import "OrderViewController.h"
 #import "ProductRowTableViewCell.h"
-#import "MBProgressHUD.h"
+#import "UIViewController+Toast.h"
 
 @interface OrderViewController ()<UITableViewDataSource, UITableViewDelegate, ProductRowTableViewCellDelegate>
 
@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = NSLocalizedString(@"Order", @"order title");
+    self.title = NSLocalizedString(@"Order details", @"order details title");
     
     // Setup submit button
     [self updateSubmitButton];
@@ -51,13 +51,7 @@
 
 - (IBAction)submitButtonTouchUpInside:(id)sender
 {
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.label.text = NSLocalizedString(@"Your order has been validated", @"order submitted message");
-    hud.margin = 10.f;
-    hud.offset = CGPointMake(hud.offset.x, 150);
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:1];
+    [self showToast:NSLocalizedString(@"Your order has been validated", @"order submitted message")];
 }
 
 

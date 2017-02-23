@@ -10,7 +10,7 @@
 #import "OrderViewController.h"
 #import "ProductTableViewCell.h"
 #import "ProductsManager.h"
-#import "MBProgressHUD.h"
+#import "UIViewController+Toast.h"
 
 @interface ProductsViewController()<UITableViewDataSource, UITableViewDelegate, ProductsManagerDelegate, ProductTableViewCellDelegate>
 
@@ -88,9 +88,16 @@
 {
     // TODO: hide loadingView
     
-    // reload tableView
-    _products = products;
-    [_tableView reloadData];
+    if (products.count == 0)
+    {
+        [self showToast:NSLocalizedString(@"No products found", @"empty products message")];
+    }
+    else
+    {
+        // reload tableView
+        _products = products;
+        [_tableView reloadData];
+    }
 }
 
 - (void)productsManager:(ProductsManager *)manager didFail:(NSError *)error
@@ -139,13 +146,7 @@
     _orderButton.title = [NSString stringWithFormat:NSLocalizedString(@"Order(%d)", @"order title with quantity"), _order.totalQuantity] ;
     
     // display product added to order message
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    hud.mode = MBProgressHUDModeText;
-    hud.label.text = [NSString stringWithFormat:NSLocalizedString(@"Added %@", @"product added to order message"), product.title];
-    hud.margin = 10.f;
-    hud.offset = CGPointMake(hud.offset.x, 150);
-    hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:1];
+    [self showToast:[NSString stringWithFormat:NSLocalizedString(@"Added %@", @"product added to order message"), product.title]];
 }
 
 @end
