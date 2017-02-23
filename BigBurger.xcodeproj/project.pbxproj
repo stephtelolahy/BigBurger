@@ -25,6 +25,8 @@
 		AD5877631E5F10DF00C02643 /* ProductRow.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877621E5F10DF00C02643 /* ProductRow.m */; };
 		AD5877661E5F186A00C02643 /* NetworkOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877651E5F186A00C02643 /* NetworkOperation.m */; };
 		AD5877691E5F18DF00C02643 /* ServiceAtlas.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5877681E5F18DF00C02643 /* ServiceAtlas.m */; };
+		AD58776D1E5F237E00C02643 /* ProductRowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AD58776B1E5F237E00C02643 /* ProductRowTableViewCell.m */; };
+		AD58776E1E5F237E00C02643 /* ProductRowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD58776C1E5F237E00C02643 /* ProductRowTableViewCell.xib */; };
 		EB455A1E24ADF13C937B4009 /* libPods-BigBurgerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D86C8CA6A9B9A21636B3641 /* libPods-BigBurgerTests.a */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,9 @@
 		AD5877651E5F186A00C02643 /* NetworkOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetworkOperation.m; path = DAL/NetworkOperation.m; sourceTree = "<group>"; };
 		AD5877671E5F18DF00C02643 /* ServiceAtlas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceAtlas.h; path = DAL/ServiceAtlas.h; sourceTree = "<group>"; };
 		AD5877681E5F18DF00C02643 /* ServiceAtlas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceAtlas.m; path = DAL/ServiceAtlas.m; sourceTree = "<group>"; };
+		AD58776A1E5F237E00C02643 /* ProductRowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProductRowTableViewCell.h; path = ViewControllers/ProductRowTableViewCell.h; sourceTree = "<group>"; };
+		AD58776B1E5F237E00C02643 /* ProductRowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProductRowTableViewCell.m; path = ViewControllers/ProductRowTableViewCell.m; sourceTree = "<group>"; };
+		AD58776C1E5F237E00C02643 /* ProductRowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProductRowTableViewCell.xib; path = ViewControllers/ProductRowTableViewCell.xib; sourceTree = "<group>"; };
 		D421D1BBFDE3CC628E804CB3 /* Pods-BigBurger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.debug.xcconfig"; sourceTree = "<group>"; };
 		E28995A0BD79163933659E32 /* Pods-BigBurger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigBurger.release.xcconfig"; path = "Pods/Target Support Files/Pods-BigBurger/Pods-BigBurger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -249,6 +254,9 @@
 				094982771E5EB4F300F12A20 /* OrderViewController.h */,
 				094982781E5EB4F300F12A20 /* OrderViewController.m */,
 				094982791E5EB4F300F12A20 /* OrderViewController.xib */,
+				AD58776A1E5F237E00C02643 /* ProductRowTableViewCell.h */,
+				AD58776B1E5F237E00C02643 /* ProductRowTableViewCell.m */,
+				AD58776C1E5F237E00C02643 /* ProductRowTableViewCell.xib */,
 			);
 			name = OrderViewController;
 			sourceTree = "<group>";
@@ -341,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD58776E1E5F237E00C02643 /* ProductRowTableViewCell.xib in Resources */,
 				091C41C21E5EAFB800BB00C5 /* LaunchScreen.storyboard in Resources */,
 				091C41BF1E5EAFB800BB00C5 /* Assets.xcassets in Resources */,
 				AD5877601E5EE55B00C02643 /* ProductTableViewCell.xib in Resources */,
@@ -460,6 +469,7 @@
 				098AD5B61E5EBA7800C9868F /* Order.m in Sources */,
 				091C41B41E5EAFB800BB00C5 /* main.m in Sources */,
 				098AD5BC1E5EBEC500C9868F /* ProductsManager.m in Sources */,
+				AD58776D1E5F237E00C02643 /* ProductRowTableViewCell.m in Sources */,
 				098AD5B91E5EBDBA00C9868F /* Product.m in Sources */,
 				AD58775F1E5EE55B00C02643 /* ProductTableViewCell.m in Sources */,
 				AD5877661E5F186A00C02643 /* NetworkOperation.m in Sources */,

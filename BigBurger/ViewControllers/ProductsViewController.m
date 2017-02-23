@@ -50,6 +50,8 @@
     _tableView.estimatedRowHeight = 44;
     _tableView.dataSource = self;
     _tableView.delegate = self;
+    // remove extra separators
+    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
 }
 
@@ -122,7 +124,7 @@
 
 #pragma mark - UITableViewDelegate
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return UITableViewAutomaticDimension;
 }
@@ -143,7 +145,7 @@
     hud.margin = 10.f;
     hud.offset = CGPointMake(hud.offset.x, 150);
     hud.removeFromSuperViewOnHide = YES;
-    [hud hideAnimated:YES afterDelay:2];
+    [hud hideAnimated:YES afterDelay:1];
 }
 
 @end
